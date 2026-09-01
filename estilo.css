@@ -1,0 +1,74 @@
+@keyframes fadein {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes memuevo {
+    0% {
+        transform: translateX(0px);
+        background-color: darkgray;
+    }  
+    50% {
+        transform: translateX(100px);
+        background-color: cadetblue;
+    }
+    100% {
+        transform: translateX(200px) scale(2.5);
+        background-color: chocolate;
+    }
+}
+
+body {
+    background-color: #0d0d0d;
+    color: white;
+    font-family: sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    color: red;
+    animation: fadein 2s ease;
+}
+
+.cuadrado {
+    background-color: black;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    left: 45%;
+    top: 50px;
+    transition: transform 3s ease-out, background-color 3s ease;
+    animation: memuevo 10s ease;
+    margin-bottom: 80px;
+}
+
+.cuadrado:hover { 
+    transform: scale(2.5);
+    background-color: blue;
+}
+
+a {
+    color: #ff4d4d;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.media-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid red;
+}
